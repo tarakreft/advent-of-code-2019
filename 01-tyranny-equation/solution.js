@@ -8,10 +8,10 @@ function calculateFuelByMass(mass) {
 }
 
 // tests
-// console.log(calculateFuelByMass(12), ' ===== 2')
-// console.log(calculateFuelByMass(14), ' ===== 2')
-// console.log(calculateFuelByMass(1969), ' ===== 654')
-// console.log(calculateFuelByMass(100756), ' ===== 33583')
+console.log(calculateFuelByMass(12) === 2)
+console.log(calculateFuelByMass(14) === 2)
+console.log(calculateFuelByMass(1969) === 654)
+console.log(calculateFuelByMass(100756) === 33583)
 
 const moduleMassData = readFileAndSplitNewline('./andyData.txt')
 const totalFuel = moduleMassData.reduce((total, moduleMass) => total + calculateFuelByMass(moduleMass), 0)
